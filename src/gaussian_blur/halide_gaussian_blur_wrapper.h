@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-void halide_gaussian_blur(
+void halide_gaussian_blur_wrapper(
     uint8_t* input,
     uint8_t* output,
     int32_t width,

@@ -23,7 +23,7 @@ int main()
     float best_time = 1e9;
     for(int i = 0; i < 1000; i++) {
         timer.reset();
-        halide_gaussian_blur(input, output, w, h);
+        halide_gaussian_blur_wrapper(input, output, w, h);
         float time = timer.elapsedUs();
         if (time < best_time) {
             best_time = time;
