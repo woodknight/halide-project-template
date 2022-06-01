@@ -1,0 +1,5 @@
+if(NOT ANDROID)
+    add_executable(halide_gaussian_blur.generator halide_gaussian_blur_generator.cpp)
+    target_link_libraries(halide_gaussian_blur.generator PRIVATE Halide::Generator)
+    add_halide_library(halide_gaussian_blur FROM halide_gaussian_blur.generator)# AUTOSCHEDULER Halide::Adams2019)
+endif()
