@@ -23,3 +23,9 @@ double Timer::elapsedMs() const
     const auto end_ = high_resolution_clock::now();
     return duration_cast<milliseconds>(end_ - begin_).count();
 }
+
+double Timer::elapsedUs() const
+{
+    const auto end_ = high_resolution_clock::now();
+    return duration_cast<microseconds>(end_ - begin_).count();
+}

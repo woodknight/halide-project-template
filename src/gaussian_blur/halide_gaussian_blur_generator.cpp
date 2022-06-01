@@ -43,7 +43,8 @@ public:
             Var xi, yi;
             const auto vec = natural_vector_size<uint16_t>();
             blur_y.compute_root().vectorize(x, vec);
-            blur_x.store_at(blur_y, y).compute_at(blur_y, x).vectorize(x, vec);
+            // blur_x.store_at(blur_y, y).compute_at(blur_y, x).vectorize(x, vec);
+            blur_x.compute_root().vectorize(x, vec);
         }
     }
 };

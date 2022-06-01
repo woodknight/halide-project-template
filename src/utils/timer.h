@@ -10,6 +10,7 @@ public:
     void reset();
     double elapsed() const;    // in seconds
     double elapsedMs() const;  // in milliseconds
+    double elapsedUs() const;  // in microseconds
 
 private:
     std::chrono::high_resolution_clock::time_point begin_;

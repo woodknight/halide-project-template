@@ -28,13 +28,13 @@ int main()
     for(int i = 0; i < 1000; i++) {
         timer.reset();
         halide_gaussian_blur(input, output);        
-        float time = timer.elapsedMs();
+        float time = timer.elapsedUs();
         if (time < best_time) {
             best_time = time;
         }
     }
 
-    std::cout << "Time: " << best_time << " ms" << std::endl;
+    std::cout << "Time: " << best_time << " us" << std::endl;
 
     return 0;
 }
