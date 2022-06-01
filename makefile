@@ -11,8 +11,8 @@ TARGET := arm-64-android-armv81a
 GEN_FOLDER := build_android/gen_files/
 GENERATOR_BIN := build/bin/
 
-FiltersManual := xxx xxx
-FiltersAuto := xxx xxx
+FiltersManual := 
+FiltersAuto := halide_gaussian_blur
 
 FiltersManual := $(foreach n, $(FiltersManual), ${GEN_FOLDER}/$(n).a)
 FiltersAuto := $(foreach n, $(FiltersAuto), ${GEN_FOLDER}/$(n).a)

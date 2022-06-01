@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 
 # set clang compiler path
 if((NOT APPLE) AND (NOT ANDROID))
-    set(CMAKE_C_COMPILER "clang-14")
-    set(CMAKE_CXX_COMPILER "clang++-14")
+    set(CMAKE_C_COMPILER "clang-13")
+    set(CMAKE_CXX_COMPILER "clang++-13")
 endif()
 
 # project name
