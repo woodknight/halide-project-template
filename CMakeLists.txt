@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 
 # set clang compiler path
 if((NOT APPLE) AND (NOT ANDROID))
-    set(CMAKE_C_COMPILER "clang-13")
-    set(CMAKE_CXX_COMPILER "clang++-13")
+    set(CMAKE_C_COMPILER "clang")
+    set(CMAKE_CXX_COMPILER "clang++")
 endif()
 
 # project name
@@ -16,7 +16,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(CMAKE_CXX_EXTENSIONS NO)
 
 # -fPIC
-# set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 # set build type
 if(NOT CMAKE_BUILD_TYPE)
@@ -35,7 +35,7 @@ set(HalideHelpers_DIR "${HALIDE_INSTALL_DIR}/lib/cmake/HalideHelpers")
 set(HALIDE_INCLUDE_DIR "${HALIDE_INSTALL_DIR}/include/")
 set(HALIDE_TOOLS_DIR "${HALIDE_INSTALL_DIR}/share/tools/")
 
-if(NOT ANDROID)    
+if(NOT ANDROID)
     find_package(Halide REQUIRED)
 endif()
 

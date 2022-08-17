@@ -8,10 +8,11 @@ if(NOT ANDROID)
 endif()
 
 if(ANDROID)
-    add_library(halide_gaussian_blur_wrapper halide_gaussian_blur_wrapper.cpp)
+    add_library(halide_gaussian_blur_wrapper SHARED halide_gaussian_blur_wrapper.cpp)
     target_link_libraries(halide_gaussian_blur_wrapper
         PRIVATE
         ${PROJECT_BINARY_DIR}/gen_files/halide_gaussian_blur.a
+        log
     )
     target_include_directories(halide_gaussian_blur_wrapper
         PRIVATE
